@@ -52,7 +52,7 @@ nav #navlinks a {
 
 .banner {
     width: 100%;
-    background-image: url(Images/BG\ 2.JPG);
+    background-image: url("Images/BG 2.JPG");
     background-position:bottom;
     background-size: cover;
 }
