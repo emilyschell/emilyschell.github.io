@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jo Martin Fan Club Homepage</title>
+        <link href="../reset.css" rel="stylesheet" type="text/css">
+        <link href="../JMFC/styles.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap" 
+        rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+<body>
+
+    <header>
+        <nav>
+            <div id="hamburger" class="icon-container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="navlinks">
+                <a id="aboutlink" href="#about">About</a>
+                <a id="gallerylink" href="#gallery">Photo Gallery</a>
+                <a id="eventslink" href="#events">Upcoming Events</a>
+                <a id="contactlink" href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="banner" class="banner">
+        <div class="overlay">
+            <h1>Jo Martin Fan Club</h1>
+            <h2>Est. 2019</h2>
+        </div>
+    </div>
+
+    <div id="about">
+        <img src="Images/About.JPG" alt="Photo of Jo Martin">
+        <div class="textcontainer">
+            <h3>About the Jo Martin Fan Club</h3>
+            <p>Jo Martin was born in summer of 2019 and immediately developed a devoted following
+                of adoring fans, who clearly needed an organized means of connecting and sharing
+                their love of the one and only Jo Martin, in all her fascinating endearingness.  
+                Thus, the Jo Martin Fan Club was born, and has grown internationally to include
+                members across the great state of North Carolina, the US, as well as the globe.
+            </p>
+        </div>
+    </div>
+
+    <div id="gallery">
+        <h3>Photo Gallery</h3>
+        <p>This section will include a regularly updated and rotated selection of Jo's finest 
+            portraiture and photographic documentation of her many enviable adventures. (Click
+            images to view full size.)
+        </p>
+        <div class="imagecontainer">
+            <a href="Images/Gal 1.JPG"><img src="Images/Gal 1.JPG" alt="Image of Jo Martin"></a>
+            <a href="Images/Gal 2.JPG"><img src="Images/Gal 2.JPG" alt="Image of Jo Martin"></a>
+            <a href="Images/Gal 3.JPG"><img src="Images/Gal 3.JPG" alt="Image of Jo Martin"></a>
+            <a href="Images/Gal 4.JPG"><img src="Images/Gal 4.JPG" alt="Image of Jo Martin"></a>
+            <a href="Images/Gal 5.JPG"><img src="Images/Gal 5.JPG" alt="Image of Jo Martin"></a>
+            <a href="Images/Gal 6.JPG"><img src="Images/Gal 6.JPG" alt="Image of Jo Martin"></a>
+            <a href="Images/Gal 7.JPG"><img src="Images/Gal 7.JPG" alt="Image of Jo Martin"></a>
+            <a href="Images/Gal 8.JPG"><img src="Images/Gal 8.JPG" alt="Image of Jo Martin"></a>
+        </div>  
+    </div>
+
+    <div id="events">
+        <h3>Upcoming Events</h3>
+        <ul>
+            <li>Walk with Jo - daily at 10:30am (weather permitting)</li>
+            <li>Nap with Jo - daily at 3:30pm</li>
+            <li>Snack with Jo - daily at 10am and 3pm</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div id="contact">
+            <h3>Contact Information</h3>
+            <p>Jo Martin Fan Club - North America Division</p>
+            <p>PO Box 706</p>
+            <p>Asheville, NC 28806</p>
+            <p>Email us: <a href="mailto: info@jmfcna.org">info@jmfcna.org</a></p>
+        </div>
+        <div id="copyright">
+            <p>&#169; Copyright 2021 Websites by Em</p>
+        </div>
+    </footer>
+
+
+    <script>
+
+        const hamburger = document.getElementById('hamburger')
+        const about = document.getElementById('aboutlink')
+        const gallery = document.getElementById('gallerylink')
+        const events = document.getElementById('eventslink')
+        const contact = document.getElementById('contactlink')
+        
+        let intViewportWidth = window.innerWidth;
+
+        if (intViewportWidth < 555) {
+        hamburger.addEventListener("click", toggleMenu);
+        about.addEventListener("click", toggleMenu);
+        gallery.addEventListener("click", toggleMenu);
+        events.addEventListener("click", toggleMenu);
+        contact.addEventListener("click", toggleMenu);
+
+        function toggleMenu(x) {
+          var x = document.getElementById("navlinks");
+          var y = document.getElementById("banner");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+            y.style.marginTop = "0"
+          } else {
+            x.style.display = "block";
+            y.style.marginTop = "10rem";
+          }
+          hamburger.classList.toggle("change");
+        }
+    }
+    </script>
+    
+</body>
+</html>
